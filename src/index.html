@@ -1,7 +1,7 @@
 <html>
   <head>
     <link rel="stylesheet" href="styles.css" />
-    <script src="index.js" defer></script>
+    <script src="index.js" defer type="module"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
@@ -22,19 +22,10 @@
         <h1>LogoHere</h1>
         <p>Best food just right next to you !</p>
       </nav>
-      <main class="item">
-        <div class="item-photo">🍕</div>
-        <div class="item-food">
-          <h2>Pizza</h2>
-          <p>Peperoni,mushroom,mozarella</p>
-          <h3>Price: 14$</h3>
-        </div>
-        <div class="item-add-to-cart">
-          <button class="item-order">
-            <i class="fa-solid fa-cart-plus"></i>
-          </button>
-        </div>
-      </main>
+      <div id="list"></div>
+      <div id="summery" class="summery">
+        
+      </div>
     </div>
   </body>
 </html>
