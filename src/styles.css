@@ -8,6 +8,7 @@
 :root {
   --button: rgb(55, 133, 169);
   --focus: rgb(37, 181, 18);
+  --delete: rgb(198, 75, 75);
 }
 
 body {
@@ -99,6 +100,35 @@ main {
   height: 5px;
 }
 
+.summery-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2em 1em;
+}
+
+.order {
+  text-align: center;
+  padding: 2em 0 0 0;
+}
+
+.summery-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.remove-btn {
+  border: none;
+  background-color: #fff;
+  color: #9c8e8e;
+}
+.remove-btn:hover,
+.remove-btn:focus {
+  border: none;
+  background-color: #fff;
+  color: var(--delete);
+}
 @media (max-width: 1200px) {
   .item {
     flex-flow: row wrap;
