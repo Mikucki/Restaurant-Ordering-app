@@ -1,11 +1,15 @@
 import menuArray from "./data.js";
 
 const summery = document.getElementById("summery");
+const summeryItem = document.getElementById("summery-item");
+const order = document.querySelector(".order-btn");
 let cartArr = [];
+let idArr = [];
 function renderMenu() {
   const list = document.getElementById("list");
   for (let food of menuArray) {
-    list.innerHTML += `<main class="item">
+    list.innerHTML += `
+        <main class="item">
         <div class="item-photo">${food.emoji}</div>
         <div class="item-food">
           <h2>${food.name}</h2>
@@ -27,14 +31,16 @@ function renderItemSummery(foodId) {
     return Number(food.id) === Number(foodId);
   })[0];
   cartArr.push(addedItem.price);
+  idArr.push(addedItem.id);
 
   document.getElementById("summery").innerHTML += `
   <div id="summery-item" class="summery-item">
     <div class="summery-flex">
       <h3>${addedItem.name}</h3>
-      <button class="remove-btn">remove</button>
+      <button class="remove-btn" data-remove="${addedItem.id}">remove</button>
+      <h3>${addedItem.price}$</h3>
     </div>
-    <h3>${addedItem.price}$</h3>
+    
   </div>`;
 }
 
@@ -42,12 +48,17 @@ function caluculateSum() {
   let cartSum = cartArr.reduce((sum, currentValue) => {
     return sum + currentValue;
   });
-  console.log(cartSum);
+
+  if (cartSum === 0) {
+    cartArr = [];
+  }
+
   return (document.getElementById("appent-item").innerHTML = `
         <div class="sum">
           <h3>Total Price:</h3>
-          <h3>${cartSum}</h3>
+          <h3>${cartSum}$</h3>
         </div>
+        <button class="order-btn" data-order="order">Order</button>
   `);
 }
 
@@ -55,6 +66,20 @@ document.addEventListener("click", function (e) {
   if (e.target.dataset.cart) {
     renderItemSummery(e.target.dataset.cart);
     caluculateSum();
+  } else if (e.target.dataset.remove) {
+    e.target.parentElement.remove();
+
+    if (e.target.dataset.remove) {
+      cartArr.push(-menuArray[e.target.dataset.remove].price);
+    }
+    caluculateSum();
+  } else if (e.target.dataset.order) {
+    const pay = document.getElementById("pay");
+    const container = document.getElementById("container");
+    pay.style.display = "flex";
+    container.style.opacity = "0.2";
+    document.getElementById("container").disable = true;
+    container.classList.add("container-unlickable");
   }
 });
 

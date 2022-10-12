@@ -17,7 +17,7 @@
     />
   </head>
   <body>
-    <div class="container">
+    <div class="container" id="container">
       <nav>
         <h1>LogoHere</h1>
         <p>Best food just right next to you !</p>
@@ -28,5 +28,21 @@
       </div>
       <div id="appent-item"></div>
     </div>
+
+    <form class="pay" id="pay">
+      <h3 class="info">Enter card details</h3>
+      <label for="name"></label>
+      <input type="text" placeholder="Enter your name" id="name" required />
+      <label for="card-num"></label>
+      <input
+        type="text"
+        placeholder="Enter card number"
+        id="card-num"
+        required
+      />
+      <label for="CVV"></label>
+      <input type="text" placeholder="Enter CVV" id="CVV" required />
+      <button class="pay-btn">Pay</button>
+    </form>
   </body>
 </html>

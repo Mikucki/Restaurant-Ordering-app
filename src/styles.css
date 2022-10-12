@@ -9,6 +9,7 @@
   --button: rgb(55, 133, 169);
   --focus: rgb(37, 181, 18);
   --delete: rgb(198, 75, 75);
+  --sucess: rgb(88, 224, 70);
 }
 
 body {
@@ -104,11 +105,14 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 0;
   padding: 0em 1em;
 }
 
 .summery-item:last-child {
   border-bottom: 3px solid rgb(151, 115, 115);
+  padding-bottom: 2em;
+  margin-bottom: 2em;
 }
 .order {
   text-align: center;
@@ -125,19 +129,100 @@ main {
   border: none;
   background-color: #fff;
   color: #9c8e8e;
+  padding: 0em 1em;
 }
 .remove-btn:hover,
 .remove-btn:focus {
   border: none;
   background-color: #fff;
   color: var(--delete);
+  padding: 0em 1em;
+  display: block;
 }
 
 .sum {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0em 1em 5em 1em;
 }
+
+.order-btn {
+  width: 100%;
+  height: 5vh;
+  padding: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--sucess);
+  border: none;
+  margin-bottom: 10em;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.order-btn:focus,
+.order-btn:hover {
+  width: 100%;
+  height: 5vh;
+  padding: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--sucess);
+  border: none;
+  margin-bottom: 10em;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.pay {
+  display: none;
+  flex-flow: column nowrap;
+  justify-content: center;
+  lighting-color: cadetblue;
+  height: 60vh;
+  width: 40vw;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: #ebebeb;
+  border: 3px solid var(--focus);
+  box-shadow: 22px 22px 100px #aaaaaa;
+}
+.info {
+  text-align: center;
+}
+input {
+  height: 10vh;
+  font-size: 1.3rem;
+  padding: 1em 1em;
+  margin: 1em;
+}
+
+.pay-btn {
+  border: none;
+  font-size: 1.3rem;
+  padding: 1em 1em;
+  margin: 1em;
+  background-color: var(--focus);
+}
+
+.pay-btn:hover,
+.pay.btn:focus {
+  border: none;
+  font-size: 1.3rem;
+  padding: 1em 1em;
+  margin: 1em;
+}
+
+.container-unlickable {
+  pointer-events: none;
+}
+
 @media (max-width: 1200px) {
   .item {
     flex-flow: row wrap;
