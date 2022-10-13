@@ -123,6 +123,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .remove-btn {
@@ -130,6 +131,8 @@ main {
   background-color: #fff;
   color: #9c8e8e;
   padding: 0em 1em;
+  flex-grow: 1;
+  text-align: left;
 }
 .remove-btn:hover,
 .remove-btn:focus {
@@ -221,6 +224,7 @@ input {
 
 .container-unlickable {
   pointer-events: none;
+  opacity: 0.2;
 }
 
 @media (max-width: 1200px) {

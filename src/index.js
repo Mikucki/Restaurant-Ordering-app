@@ -26,6 +26,11 @@ function renderMenu() {
   }
 }
 
+function getOrderTag() {
+  document.getElementById("order").innerHTML =
+    '<h2 class="order">Your order</h2>';
+}
+
 function renderItemSummery(foodId) {
   const addedItem = menuArray.filter(function (food) {
     return Number(food.id) === Number(foodId);
@@ -63,7 +68,11 @@ function caluculateSum() {
 }
 
 document.addEventListener("click", function (e) {
+  const pay = document.getElementById("pay");
+  const container = document.getElementById("container");
+
   if (e.target.dataset.cart) {
+    getOrderTag();
     renderItemSummery(e.target.dataset.cart);
     caluculateSum();
   } else if (e.target.dataset.remove) {
@@ -74,13 +83,15 @@ document.addEventListener("click", function (e) {
     }
     caluculateSum();
   } else if (e.target.dataset.order) {
-    const pay = document.getElementById("pay");
-    const container = document.getElementById("container");
     pay.style.display = "flex";
-    container.style.opacity = "0.2";
-    document.getElementById("container").disable = true;
     container.classList.add("container-unlickable");
   }
+});
+
+document.getElementById("pay").addEventListener("submit", (e) => {
+  e.preventDefault();
+  pay.style.display = "none";
+  container.classList.remove("container-unlickable");
 });
 
 function render() {

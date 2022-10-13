@@ -23,9 +23,8 @@
         <p>Best food just right next to you !</p>
       </nav>
       <div id="list"></div>
-      <div id="summery" class="summery">
-        <h2 class="order">Your order</h2>
-      </div>
+      <div id="order"></div>
+      <div id="summery" class="summery"></div>
       <div id="appent-item"></div>
     </div>
 
@@ -42,7 +41,14 @@
       />
       <label for="CVV"></label>
       <input type="text" placeholder="Enter CVV" id="CVV" required />
-      <button class="pay-btn">Pay</button>
+      <input
+        type="submit"
+        value="Pay"
+        class="pay-btn"
+        id="submit"
+        data-submit="submit"
+      />
     </form>
+    <p></p>
   </body>
 </html>
