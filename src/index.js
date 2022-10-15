@@ -98,4 +98,6 @@ function render() {
   renderMenu();
 }
 
+function add() {}
+
 render();
