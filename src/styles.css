@@ -197,6 +197,7 @@ main {
   box-shadow: 22px 22px 100px #aaaaaa;
 }
 .info {
+  margin-top: 1em;
   text-align: center;
 }
 input {
@@ -212,6 +213,7 @@ input {
   padding: 1em 1em;
   margin: 1em;
   background-color: var(--focus);
+  cursor: pointer;
 }
 
 .pay-btn:hover,
@@ -226,6 +228,19 @@ input {
   pointer-events: none;
   opacity: 0.2;
 }
+
+.thanks-to {
+  background-color: rgb(122, 241, 122);
+  display: none
+}
+
+.thanks-to h3,
+.thanks-to h2 {
+  text-align: center;
+  padding: 0.5em;
+}
+
+
 
 @media (max-width: 1200px) {
   .item {

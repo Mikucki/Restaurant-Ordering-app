@@ -26,12 +26,19 @@
       <div id="order"></div>
       <div id="summery" class="summery"></div>
       <div id="appent-item"></div>
+      <main class="thanks-to" id="thanks-to"></main>
     </div>
 
     <form class="pay" id="pay">
       <h3 class="info">Enter card details</h3>
       <label for="name"></label>
-      <input type="text" placeholder="Enter your name" id="name" required />
+      <input
+        type="text"
+        placeholder="Enter your name"
+        id="name"
+        name="name"
+        required
+      />
       <label for="card-num"></label>
       <input
         type="text"
@@ -41,14 +48,14 @@
       />
       <label for="CVV"></label>
       <input type="text" placeholder="Enter CVV" id="CVV" required />
-      <input
+      <button
         type="submit"
-        value="Pay"
         class="pay-btn"
-        id="submit"
-        data-submit="submit"
-      />
+        id="finishOrder"
+        data-finishOrder="finishOrder"
+      >
+        Pay
+      </button>
     </form>
-    <p></p>
   </body>
 </html>

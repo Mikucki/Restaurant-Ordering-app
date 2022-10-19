@@ -92,12 +92,18 @@ document.getElementById("pay").addEventListener("submit", (e) => {
   e.preventDefault();
   pay.style.display = "none";
   container.classList.remove("container-unlickable");
+  document.getElementById("summery").style.display = "none";
+  document.getElementById("appent-item").style.display = "none";
+  document.getElementById("order").style.display = "none";
+  document.getElementById("thanks-to").style.display = "block";
+  document.getElementById("thanks-to").innerHTML = `
+    <h3>Thanks for ordering ${e.target["name"].value} </h3>
+    <h2>You'r order is on a way to your Home :D</h2>
+  `;
 });
 
 function render() {
   renderMenu();
 }
-
-function add() {}
 
 render();
