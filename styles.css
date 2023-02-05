@@ -57,7 +57,7 @@ button:focus {
 }
 
 nav {
-  background-image: url(../src/images/burger.jpg);
+  background-image: url(./images/burger.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
