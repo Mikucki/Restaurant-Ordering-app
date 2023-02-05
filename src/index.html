@@ -17,45 +17,48 @@
     />
   </head>
   <body>
-    <div class="container" id="container">
-      <nav>
-        <h1>LogoHere</h1>
-        <p>Best food just right next to you !</p>
-      </nav>
-      <div id="list"></div>
-      <div id="order"></div>
-      <div id="summery" class="summery"></div>
-      <div id="appent-item"></div>
-      <main class="thanks-to" id="thanks-to"></main>
-    </div>
+    <div class="wraper">
+      <div class="container" id="container">
+        <nav class="logo-here">
+          <h1>LogoHere</h1>
+          <p>Best food just right next to you !</p>
+        </nav>
+        <div id="list"></div>
+        <div id="order"></div>
+        <div id="summery" class="summery"></div>
+        <div id="appent-item"></div>
+        <main class="thanks-to" id="thanks-to"></main>
+      </div>
 
-    <form class="pay" id="pay">
-      <h3 class="info">Enter card details</h3>
-      <label for="name"></label>
-      <input
-        type="text"
-        placeholder="Enter your name"
-        id="name"
-        name="name"
-        required
-      />
-      <label for="card-num"></label>
-      <input
-        type="text"
-        placeholder="Enter card number"
-        id="card-num"
-        required
-      />
-      <label for="CVV"></label>
-      <input type="text" placeholder="Enter CVV" id="CVV" required />
-      <button
-        type="submit"
-        class="pay-btn"
-        id="finishOrder"
-        data-finishOrder="finishOrder"
-      >
-        Pay
-      </button>
-    </form>
+      <form class="pay" id="pay">
+        <div class="pay-close" id="pay-close">X</div>
+        <h3 class="info">Enter card details</h3>
+        <label for="name"></label>
+        <input
+          type="text"
+          placeholder="Enter your name"
+          id="name"
+          name="name"
+          required
+        />
+        <label for="card-num"></label>
+        <input
+          type="text"
+          placeholder="Enter card number"
+          id="card-num"
+          required
+        />
+        <label for="CVV"></label>
+        <input type="text" placeholder="Enter CVV" id="CVV" required />
+        <button
+          type="submit"
+          class="pay-btn"
+          id="finishOrder"
+          data-finishOrder="finishOrder"
+        >
+          Pay
+        </button>
+      </form>
+    </div>
   </body>
 </html>

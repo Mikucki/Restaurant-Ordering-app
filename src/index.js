@@ -88,6 +88,13 @@ document.addEventListener("click", function (e) {
   }
 });
 
+let payClose = document
+  .getElementById("pay-close")
+  .addEventListener("click", () => {
+    document.getElementById("pay").style.display = "none";
+    container.classList.remove("container-unlickable");
+  });
+
 document.getElementById("pay").addEventListener("submit", (e) => {
   e.preventDefault();
   pay.style.display = "none";
