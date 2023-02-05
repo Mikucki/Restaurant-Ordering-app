@@ -301,6 +301,10 @@ input {
   .item-food {
     text-align: center;
   }
+  .pay {
+    width: 70vw;
+    height: 70vw;
+  }
 }
 
 @media (min-width: 1210px) {
