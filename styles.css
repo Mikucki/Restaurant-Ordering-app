@@ -193,7 +193,7 @@ main {
 .pay {
   display: none;
   flex-flow: column nowrap;
-  justify-content: center;
+  justify-content: space-evenly;
   lighting-color: cadetblue;
   height: 75vh;
   width: 40vw;
@@ -303,7 +303,7 @@ input {
   }
   .pay {
     width: 70vw;
-    height: 70vw;
+    height: 60vh;
   }
 }
 
